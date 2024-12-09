@@ -37,7 +37,6 @@ def dampener_technique(level_list: list[int]) -> bool:
     return is_safe
 
 with open("input.txt") as f:
-    print("Part 2")
     number_of_safe_reports = 0
     for line in f:
         level_list: list[int] = list(map(int, line.split()))
@@ -45,4 +44,5 @@ with open("input.txt") as f:
             number_of_safe_reports += 1
         elif dampener_technique(level_list):
             number_of_safe_reports += 1
+    print("Part 2")
     print(f"Number of safe reports: {number_of_safe_reports}")
